@@ -1,0 +1,168 @@
+/* mobile version*/
+
+.header {
+  background-color: #fff;
+  width: 100%;
+  height: 44px;
+  position: sticky;
+  a {
+    color: white;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+}
+
+.header {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #0000ec;
+  }
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #00f3bb;
+  text-decoration: line-through;
+}
+
+.header {
+  .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 5px 15px;
+    text-decoration: none;
+  }
+}
+
+/* menu */
+
+.header {
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+}
+
+/* menu icon */
+
+.header {
+  .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 25px 15px;
+    position: relative;
+    user-select: none;
+  }
+}
+
+.header .menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.1s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/*desktop version*/
+
+@media screen and (min-width: 1220px) {
+  .header {
+    .logo {
+      padding: 0 0;
+      margin: 18px 0 0 100px;
+      width: 25px;
+      height: 34px;
+    }
+  }
+
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #fff;
+    color: #00f3bb;
+    text-decoration: line-through;
+  }
+  .header li a:active,
+  .header .menu-btn:active {
+    color: rgba(6, 10, 36, 0.56);
+    text-decoration: line-through;
+  }
+  .header {
+    ul {
+      background-color: #fff;
+    }
+  }
+  .header {
+    li {
+      float: left;
+    }
+  }
+  .header li a {
+    color: black;
+    padding: 20px 30px;
+  }
+  .header {
+    .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+      margin: 6px 70px 0 0;
+    }
+  }
+  .header {
+    .menu-icon {
+      display: none;
+    }
+  }
+}

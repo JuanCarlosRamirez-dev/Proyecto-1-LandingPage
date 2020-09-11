@@ -1,0 +1,70 @@
+/*mobile version*/
+
+main .episodios {
+    height: 1203px;
+    margin-top: 35px;
+    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+    transform: skew(0deg, -6deg);
+    z-index: 1;
+
+    h1 {
+        padding: 50px 0 21px 16px;
+        @include titulo-h1();
+        color: #ffffff;
+        transform: skew(0deg, 6deg);
+    }
+}
+
+.frames-container {
+    margin: 0 11px 0 11px;
+    display: grid;
+    row-gap: 18px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 225px;
+    transform: skew(0deg, 6deg);
+
+    iframe {
+        border: none;
+    }
+    
+    .last {
+        margin-bottom: 48px;
+    }
+}
+
+/*desktop version*/
+
+@media screen and (min-width: 1220px) {
+
+    main .episodios {
+        margin-top: 63px;
+        height: 858.6px;
+
+        h1 {
+            padding: 110px 0 0 205px;
+            font-size: 48px;
+            
+        }
+
+        .frames-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 232px;
+            grid-gap: 72px;
+            justify-content: space-evenly;
+            margin: 26px 100px 0 100px; 
+            
+            .img-container{
+                margin-bottom: 0;
+            }
+        }
+
+        iframe{
+            height: 102%;
+        }
+
+        .last {
+            margin-bottom: 0;
+        }
+    }
+}
